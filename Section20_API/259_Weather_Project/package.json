@@ -1,0 +1,14 @@
+{
+  "name": "weather_project",
+  "version": "1.0.0",
+  "description": "weather project using OpenWeather API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charlie",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

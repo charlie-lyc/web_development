@@ -1,0 +1,14 @@
+{
+  "name": "324_route_parameter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "charlie",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

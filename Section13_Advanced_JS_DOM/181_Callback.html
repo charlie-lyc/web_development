@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Callback</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    /* "Higher Order Function" : 크롬 콘솔에서 실습 ex) addEventListener()
+
+      // 아래와 같이 입력 후 어디든 클릭해 보자.(작동되지 않으면 Elements 창으로 이동했다가 다시 입력)
+      $0.addEventListener('click', function() {
+        console.log('I got clicked!');
+      });
+
+      // 또는 아래와 같이 입력 후 아무 키나 눌러보자.(콘솔창에서 작업했으므로 웹페이지 한번 클릭하고 키 누르기)
+      document.addEventListener('keypress', function(event) {
+        respondToKey(event);
+      });
+      function respondToKey(event) {
+        console.log('Key was pressed!');
+      }
+
+    */
+
+    /* "Callback Function" : 크롬 콘솔에서 실습
+
+      $0.addEventListener('click', function(event) {
+        console.log(event);
+      });
+      // 위와 같이 입력 후에 아무 곳이나 클릭하면 아래와 같이 콘솔창에 출력
+      => MouseEvent {isTrusted: true, screenX: -647, screenY: 573, clientX: 528, clientY: 154, …}
+          altKey: false
+          bubbles: true
+          button: 0
+          buttons: 0
+          cancelBubble: false
+          cancelable: true
+          clientX: 528
+          clientY: 154
+          composed: true
+          ctrlKey: false
+          currentTarget: null
+          defaultPrevented: false
+          detail: 1
+          eventPhase: 0
+          fromElement: null
+          isTrusted: true
+          layerX: 351
+          layerY: 13
+          metaKey: false
+          movementX: 0
+          movementY: 0
+          offsetX: 352
+          offsetY: 13
+          pageX: 528
+          pageY: 154
+          path: (7) [div#siteSub.noprint, div#bodyContent.mw-body-content, div#content.mw-body, body.mediawiki.ltr.sitedir-ltr.mw-hide-empty-elt.ns-0.ns-subject.mw-editable.page-JavaScript.rootpa…, html.client-js.ve-available, document, Window]
+          relatedTarget: null
+          returnValue: true
+          screenX: -647
+          screenY: 573
+          shiftKey: false
+          sourceCapabilities: InputDeviceCapabilities {firesTouchEvents: false}
+          srcElement: div#siteSub.noprint
+          target: div#siteSub.noprint
+          timeStamp: 20883.099999999104
+          toElement: div#siteSub.noprint
+          type: "click"
+          view: Window {parent: Window, opener: null, top: Window, length: 0, frames: Window, …}
+          which: 1
+          x: 528
+          y: 154
+          __proto__: MouseEvent
+
+      // 매개변수는 어떤 것을 사용하든 상관없다. "함수가 실행되는 매번 'event(MouseEvent, KeyboardEvent 등)'관련 객체를 생성한다."는 사실이 중요하다.
+      // 즉, "Callback Function"은 객체($0)가 addEventListener()메소드를 통해 어떤 일을 하든 그 일이 끝나는 것을 기다리고 있는 것이 아니라,
+            자기 할일(이벤트 객체 만들기)을 하고 다음 명령을 실행하기 위해 호출대기 상태에 있다.
+      $0.addEventListener('click', function(e) {
+        console.log(e);
+      });
+
+    */
+
+    /* "addEventListener()"의 개념을 간략화해보면 아래의 개념과 같다.
+
+      function anotherAddEventListener(typeOfEvent, callback) {
+
+        var eventThatHappend = {
+          eventType: 'keypress',
+          key: 'p',
+          durationOfKeypress: 2
+        }
+
+        if (eventThatHappend.eventType === typeOfEvent) {
+          callback(eventThatHappend);
+        }
+
+      }
+
+      debugger;
+      anotherAddEventListener('keypress', function(event) {
+        console.log(event);
+      });
+
+    */
+
+    </script>
+
+  </body>
+</html>

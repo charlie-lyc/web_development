@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <title>jQuery</title>
+  </head>
+  <body>
+
+    <img>
+
+    <h1>Hello</h1>
+
+    <a></a>
+
+    <button>Click Me</button>
+    <button>Click Me</button>
+    <button>Click Me</button>
+    <button>Click Me</button>
+    <button>Click Me</button>
+
+    <input>
+
+
+
+    <!-- Bootstrap jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- jQuery : Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- My External JS -->
+    <script src="index.js" charset="utf-8"></script>
+    <!-- My Internal JS -->
+    <script type="text/javascript">
+    /* 앞서 만든 "Drum Kit" 프로젝트를 실행한 후 크롬 콘솔에서 실습
+
+      // 일반적인 JS에서
+      document.querySelector('h1')
+      => <h1 id="title">Drum 🥁 Kit</h1>
+      // jQuery가 로딩 되지 않았을 때
+      $('h1')
+      => <h1 id="title">Drum 🥁 Kit</h1>
+
+      // jQuery가 정상적으로 로딩 되었을 때
+      jQuery('h1')
+      => S.fn.init [h1#title, prevObject: S.fn.init(1)]
+      $('h1')
+      => S.fn.init [h1#title, prevObject: S.fn.init(1)]
+
+      // 'jQuery is not defined' or "$ is not defined" 이런 멧시지가 뜨면
+          => *** "jQuery CDN"이 필요하다!!! ***
+      // 앞서 Bootstrap 사용을 위해 jQuery를 사용했지만,
+         => *** 주로 "Google CDN"을 사용하도록 하자!!! ***
+      // CSS 파일처럼 위치가 매우 중요하다!!!
+         => *** 반드시 "My JS" 앞쪽에 위치해야 한다!!! ***
+    */
+
+    /* 앞서 만든 "Drum Kit" 프로젝트를 실행한 후 크롬 콘솔에서 실습
+      // JS
+      for (let i = 0; i < document.querySelectorAll('button').length; i++) {
+        document.querySelectorAll('button')[i].addEventListener('click', function() {
+          document.querySelector('h1').style.color = 'red';
+        });
+      }
+
+      // jQuery
+      $('button').click(function() {
+        $('h1').css('color', 'red');
+      });
+    */
+
+    /*
+      앞서 우리는 jQuery를 사용해서 프로그램의 길이를 획기적으로 줄일 수 있었다.
+      이에 추가하여 비록 가독성은 완전 제로이지만 물리적으로 파일의 길이를 더욱 줄일 수 있다.
+      단, JS와 CSS파일만 가능하다.
+      => Minifier : https://www.minifier.org/
+    */
+    </script>
+
+  </body>
+</html>

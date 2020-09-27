@@ -1,0 +1,90 @@
+/* positon: static(default), relative, absolute, fixed */
+
+/* parent object내에서의 block element의 위치를 조정하고자 할 때 'position: absolute'를 이용한다. */
+/* 즉 'position: relative'를 이용해 다른 개체에 상관없이 자유로운 블록 개체의 위치 이동이 가능했다면, */
+/* 'position: absolute'는 오로지 부모 객체 내에서의 위치 이동만 가능하다. */
+/* 그리고 이러한 이동은 부모 객체내의 다른 개체의 위치에 영향을 준다!!! */
+
+/*  이것은 마치 "부모객체 내에서의 마진" 개념이라고 볼 수 있다. */
+.parent {
+  border-style: solid;
+  width: 500px;
+  height: 500px;
+  background-color: grey;
+  /* 부모 객체내 자식 객체의 위치 조정을 위해서 부모객체의 포지션 속성값이 'relative'이어야 한다. */
+  /* 만약 부모 객체의 포지션 속성값이 'relative'가 아니면(static 또는 default 이면) */
+  /* 일반적으로 "body tag"가 부모 객체가 된다.*/
+  position: relative;
+  left: 500px;
+}
+.child {
+  border-style: dotted;
+  /* 다시한번 강조하자면, 부모 객체의 포지션 속성값이 'relative'이어야 한다. */
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+}
+
+/* 빨간색 사각형의 위치이동이 파란색 사각형의 위치에 영향을 주고, */
+/* 이어 파란색 사각형의 위치이동이 노란색 사각형의 위치에 영향을 준다. */
+.red1 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  position: absolute;
+  /* 오른쪽으로 부터 200px 만큼 블록개체를 밀어내는 것이 아니라(relative 개념과 다르게) */
+  /* 부모객체 내의 오른쪽으로 부터 200px 간격을 두고 위치한다. */
+  /* 속성이 left일때는 개체의 왼쪽 변이 기준이 되고, right일때는 개체의 오른쪽 변이 기준이 된다. */
+  right: 200px;
+}
+.blue1 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: absolute;
+  /* 포지션 속성값이 'relative'인 특정 부모객체가 없으므로 "body tag"가 부모 객체이다. */
+  top: 300px;
+}
+.yellow1 {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+}
+
+/* Challenge : "postion" 속성의 'absolute' 개념을 이용해서 사각형 개체들을 배치하기 */
+/* body tag의 margin: 8px 주의!!! */
+body {
+  margin-left: 0px;
+}
+.red2 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  position: absolute;
+  top: 900px;
+  left: 200px;
+}
+.blue2 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: absolute;
+  top: 800px;
+  left: 100px;
+}
+/* 위의 두 사각형 개체의 위치 이동으로 이 노란색 사각형의 위치 이동은 없음 */
+.yellow2 {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+}
+
+/* fixed : 웹사이트에서 네비게이션바로 이용하는 기능  */
+/* 제한된 스크린의 크기에서 스크롤할 경우 메뉴등이 언제나 따라다니도록  */
+.navbar {
+  height: 100px;
+  width: 300px;
+  background-color: green;
+  position: fixed;
+  top: 0px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Get Random Number</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      /* var n = Math.random(); // 0에서 1사이의 임의의 숫자 : 0은 포함하고 1은 포함하지 않음.
+           => 즉, n = 0 ~ 0.9999999999999999("16 Decimal Places") */
+
+      /* 0부터 특정숫자(max) 사이의 임의의 정수 얻기 : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random  */
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+
+      /* 주사위를 던졌을 때 임의의 숫자 얻기 */
+      function rollDice() {
+        return Math.floor(Math.random() * 6) + 1;
+      }
+
+      /* 임의의 퍼센트(백분율) 얻기 */
+      function getRandomPercent() {
+        return Math.floor(Math.random() * 100);
+      }
+
+      console.log(rollDice());
+      console.log(getRandomPercent());
+
+    </script>
+  </body>
+</html>

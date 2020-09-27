@@ -1,0 +1,155 @@
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 1.5em;
+  color: #40514E;
+}
+
+h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 5rem !important;
+  margin-top: 30px auto 0 auto; /* 'em'이나 '%'를 사용할 수도 있다.*/
+  color: #66BFBF;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #66BFBF;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #11999E;
+}
+
+p {
+  line-height: 2;
+}
+
+a {
+  color: #11999E;
+}
+
+hr {
+  border: none;
+  border-top: dotted 9px #EAF6F6;
+  width: 3%;
+}
+
+.top-container {
+  background-color: #EAF6F6;
+  padding: 20px;
+}
+
+.top-cloud {
+  margin-left: 700px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  margin-left: -150px;
+}
+
+.bottom-container {
+  background-color: #66BFBF;
+  padding-top: 50px;
+  height: 200px;
+}
+
+.profile {
+  width: 30%;
+  margin: 150px auto;
+}
+
+.my-profile {
+  border-radius: 100%;
+}
+
+.name {
+  text-decoration: underline;
+}
+
+.job {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.skills {
+  margin: 150px auto;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 150px auto;
+  text-align: left;
+}
+
+.contact-me {
+  width: 40%;
+  margin: 150px auto;
+}
+
+.computer {
+  border-radius: 100%;
+  width: 20%;
+  height: 20%;
+  float: left;
+  margin-right: 30px;
+}
+
+.chillies {
+  border-radius: 100%;
+  width: 20%;
+  height: 20%;
+  float: right;
+  margin-left: 30px;
+}
+
+.skill-description {
+  clear: both;
+}
+
+.footer-link {
+  color: #11999E;
+  text-decoration: none;
+  margin: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-link:hover {
+  color: #EAF6F6;
+  text-decoration: underline;
+}
+
+.copyright {
+  color: #EAF6F6;
+  padding-top: 30px;
+}
+
+/* CSS Button Creator : https://cssbuttoncreator.com/ 에서 링크 버튼 만들기 */
+.btn {
+  background-image: linear-gradient(to bottom, #11CDD4, #11999E);
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: #EAF6F6;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 10px;
+  text-decoration: none;
+}
+.btn:hover {
+  background-image: linear-gradient(to bottom, #30E3CB, #2BC4AD);
+}
+
+/* 내가 만든 버튼 링크 버튼 */
+/* background-image: linear-gradient(to bottom, [start color], [end color]) (또는 start, middle, end) */
+/* .btn {
+  background-image: linear-gradient(to bottom, #66BFBF, #11999E, #66BFBF);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #EAF6F6;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+} */

@@ -1,0 +1,82 @@
+/* positon: static(default), relative, absolute, fixed */
+
+/* block element의 상대적 위치를 조정하고자 할 때 'position: relative'를 이용한다. */
+/* 블록 개체의 상대적 위치 이동을 통해 마치 블록 자체가 화면 밖으로 이동하는 듯한 효과를 보여준다. */
+
+/* 이와 비교하면 margin은 블록 개체 내에서의 border box의 이동이라고 볼 수 있다.*/
+
+.red1 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  position: relative; /* relative position: 다른 elements의 위치에 영향을 주지 않는다. */
+  top: 30px;
+  left: 60px;
+  z-index: -1;
+}
+.blue1 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  margin-left: 30px; /* position 과 margin 차이점 */
+}
+.yellow1 {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  position: relative;
+  right: 60px;
+}
+
+/* challenge : "postion" 속성의 'relative' 개념을 이용해서 사각형 개체들을 배치하기 */
+/* 1. 넓이와 높이를 가지는 여러 element를 한 줄에 놓기 위해 'display: inline-block;' 활용, 또는 'position: relative'와 'top, bottom'을 활용 */
+/* 2. 각 block element의 상대적 위치를 조정하기 위해 'position: relative'와 'left, right'를 활용 */
+/* 4px의 오차 발생? display 속성의 'inline-block'으로의 전환과 관련이 있는 듯하다. */
+/* .red2 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  display: inline-block;
+  position: relative;
+  left: 204px;
+}
+.blue2 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  display: inline-block;
+  position: relative;
+  right: 100px;
+}
+.yellow2 {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  display: inline-block;
+  position: relative;
+  right: 104px;
+} */
+
+/* Another Way */
+.red2 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  position: relative;
+  left: 200px;
+}
+.blue2 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: relative;
+  bottom: 100px;
+}
+.yellow2 {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  position: relative;
+  left: 100px;
+  bottom: 200px;
+}

@@ -1,0 +1,55 @@
+/*** 1. Multiple Selectors */
+/* selector1, selector2 {
+
+} */
+
+h1, p {
+  color: red;
+}
+
+/*** 2. Hierarchical Selectors */
+/* "Parent"  "Child" */
+/* selector1 selector2 {
+
+} */
+
+section p {
+  color: green;
+}
+
+/*** 3. Combined Selectors : specify the selector */
+
+/* 1) "Tag"  "Class" */
+/* selector1.selector2 {
+
+} */
+
+/* 2) XXX "Tag"  "ID" XXX : 이 형태는 작동되지 않는다. XXX */
+/* 생각해보면 "ID" selector가 이미 웹페이지상에서 유일무이한 객체이므로
+   굳이 앞에 다른 selector를 사용해서 객체를 특정할 필요가 없다.
+   다시말해 그냥 '#selector2'로 사용하면 된다. */
+/* selector1#selector2 {
+
+} */
+
+
+/***** Note *****/
+/* 아주 심플하게 이해 된다. 한 가지만 주의하자!!!
+   부모객체가 'element'이고 자식객체가 'class'일 경우 둘 사이에 공백이 있느냐 없느냐!!!
+   1) element .class : Hierarchical
+   2) element.class : Combined
+
+  [example1] div .heading : 웹페이지 상에서 <div>를 부모객체로 하는 class="heading"인 모든 객체
+  [example2] div.heading : 웹페이지 상에서 <div>이고 class="heading"인 특정 객체  */
+
+div .heading {
+  color: red;
+}
+
+div.heading {
+  color: green;
+}
+
+div p.heading {
+  color: blue;
+}

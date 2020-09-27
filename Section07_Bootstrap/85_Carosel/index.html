@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- CSS Stylesheets -->
+    <style media="screen">
+      .carousel-item {
+        height: 300px;
+      }
+    </style>
+
+    <title>Bootstrap Carousel</title>
+  </head>
+  <body>
+    <!-- Carousel : Slides Only => * Default : data-interval=5000, data-pause="hover"
+                          * "class" options : 'carousel', 'carousel slide', 'carousel slide carousel-fade'
+                          * "data-ride" options : 'carousel'(로딩되면 자동플레이), 'false'(로딩된 후 첫 작동을 하면 이후에 오토플레이) -->
+    <div id="carouselExampleSlidesOnly" class="carousel" data-ride="carousel" data-interval=5000 data-pause="hover" >
+      <div class="carousel-inner">
+        <div class="carousel-item active bg-primary">
+          <img src="..." class="d-block w-100" alt="...">
+          First Slide
+        </div>
+        <div class="carousel-item bg-secondary">
+          <img src="..." class="d-block w-100" alt="...">
+          Second Slide
+        </div>
+        <div class="carousel-item bg-info">
+          <img src="..." class="d-block w-100" alt="...">
+          Third Slide
+        </div>
+      </div>
+    </div>
+
+    <hr style="border: none;">
+
+    <!-- Carousel : with Controls -->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval=4000>
+      <div class="carousel-inner">
+        <div class="carousel-item active bg-primary">
+          <img src="..." class="d-block w-100" alt="...">
+          First Slide
+        </div>
+        <div class="carousel-item bg-secondary">
+          <img src="..." class="d-block w-100" alt="...">
+          Second Slide
+        </div>
+        <div class="carousel-item bg-info">
+          <img src="..." class="d-block w-100" alt="...">
+          Third Slide
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <hr style="border: none;">
+
+    <!-- Carousel : with Indicators -->
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="false" data-interval=3000>
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active bg-primary">
+          <img src="..." class="d-block w-100" alt="...">
+          First Slide
+        </div>
+        <div class="carousel-item bg-secondary">
+          <img src="..." class="d-block w-100" alt="...">
+          Second Slide
+        </div>
+        <div class="carousel-item bg-info">
+          <img src="..." class="d-block w-100" alt="...">
+          Third Slide
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            : 설명하기 복잡한데 MDN에서는 아래와 같이 설명하고 있다.
+              * aria-hidden="false" => (default) The element is exposed to the accessibility API.
+              * aria-hidden="true" => (default) The element is not exposed to the accessibility API. -->
+        <!-- <span class="sr-only">Previous</span>
+            : 추측하건데 코딩 가독성을 높이기 위해 엔지니어의 '스크린에서만 보이도록' 만든 태그인 것 같다.-->
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+        <!-- <span class="sr-only">Next</span> -->
+      </a>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </body>
+</html>

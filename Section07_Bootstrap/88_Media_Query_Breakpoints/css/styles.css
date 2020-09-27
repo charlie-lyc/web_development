@@ -1,0 +1,55 @@
+/*** Media Query */
+/* @media print {
+  h1 {
+    color: red;
+  }
+}
+
+@media screen {
+  h2 {
+    color: red;
+  }
+}
+
+@media speech {
+  h3 {
+    color: red;
+  }
+} */
+
+
+/*** @media [type][feature] */
+/*** Example */
+/* @media screen (min-width: 1092px) {
+  //Change Something.
+} */
+
+
+/* @media screen and (max-width: 1092px) { */
+/* @media (max-width: 1092px) { */
+  /* h1 {
+    color: red;
+    font-size: 1rem;
+  }
+  h2 {
+    color: green;
+  }
+  h3 {
+    color: blue;
+    font-size: 2rem;
+  }
+} */
+
+@media (min-width: 768px) and (max-width: 1092px) {
+  h1 {
+    color: red;
+    font-size: 1rem;
+  }
+  h2 {
+    color: green;
+  }
+  h3 {
+    color: blue;
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+  </head>
+  <body>
+
+    <!-- Running Code inside EJS template : "<% // Code %>" in every line -->
+    <% if (kindOfday === 'Sunday' || kindOfday === 'Saturday') { %>
+      <!-- Variable inside EJS template -->
+      <h1 style="color: red;"><%= kindOfday %> To Do List</h1>
+    <% } else { %>
+      <h1 style="color: purple;"><%= kindOfday %> To Do List</h1>
+    <% } %>
+
+  </body>
+</html>

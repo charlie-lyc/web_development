@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Love Calculator</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      var yourName = prompt('What is your name?');
+      var yourCrush = prompt('What is her name?');
+      var loveScore = calculateLoveScore();
+      alert(yourName + ' and ' + yourCrush + "'s love score is " + loveScore + '%.');
+
+      function calculateLoveScore() {
+        return Math.floor(Math.random() * 100);
+      }
+
+    </script>
+
+  </body>
+</html>

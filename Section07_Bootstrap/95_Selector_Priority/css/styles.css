@@ -1,0 +1,26 @@
+h1 {
+  /*** 가장 나중에 작성된 코드에 우선순위가 있다. */
+  color: red;
+  color: green;
+}
+
+.title {
+  color: blue;
+}
+
+/*** "tag" < "class" < "id" 우선순위(오른쪽이 더 높다.)  */
+#heading {
+  color: brown;
+}
+
+/*** CSS Order */
+/* 1. 해당 태그 내의 style 속성 ex) <div style=""></div> => 왠만하면 이 스타일 사용하지 말것!
+   2. <style></style> 태그
+   3. external CSS link.  ex) <link rel="stylesheet" href=""> */
+
+/* CSS Link Order
+   1) external file link ex) <link rel="stylesheet" href="css/styles.css">
+   2) external url link ex) <link rel="stylesheet" <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   3) 두개의 외부링크가 있다면 나중에 추가된 링크에 우선 순위가 있다. : ex2)에 우선 순위가 있다.
+      ex1) <link rel="stylesheet" <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css1"
+      ex2) <link rel="stylesheet" <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css2" */

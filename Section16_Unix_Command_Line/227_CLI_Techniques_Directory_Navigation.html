@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Command Line Techniques</title>
+  </head>
+  <body>
+  <!-- Command Line Techniques
+
+  1. Present working directory
+      pwd
+
+  2. Navigate directory :
+   1) list
+      ls -a                             => show all
+      ls -al                            => show all in list
+
+   2) change directory
+      cd (./)Documents(/)               => go down
+      cd ..(/)                          => go up
+      cd D... [+ 'tab' or 'enter' key]  => automate searching directory
+
+      // "절대 경로"를 알고 있다면,
+      cd Users/charlie/Documents/Udemy/WebDevelopmentBootcamp/
+      // "상대 경로"를 알고 있다면,
+      cd ../WebDevelopmentBootcamp/
+      // "root directory로 부터 경로"를 특정할 수 있다면,
+      cd ~/WebDevelopmentBootcamp/       => 전체에 'WebDevelopmentBootcamp/'가 하나 뿐일 경우
+      cd ~/Udemy/WebDevelopmentBootcamp/ => 다른 디렉토리에 'WebDevelopmentBootcamp/'가 있을 경우
+
+      cd ~                               => go "home directory[ex) /Users/charlie]"
+
+   3) ['up' or 'down' key]               => change shortcuts for used command
+   4) ['left' or 'right' key]            => move cursor for editing
+
+   5) [control] + [a]                    => move cursor to the beginning of command
+   6) [control] + [e]                    => move cursor to the end of command
+
+   6) [control] + [u]                    => remove the all of command
+
+
+  3. Create directory, file :
+   1) make directory
+      // 원하는 디렉토리에서
+      mkdir [newDirectoryName]
+
+   2) make file
+      // 원하는 디렉토리에서
+      touch [newFileName]             => make empty file
+
+      nano [newFileName]              => make and open file
+      atom [newFileName]              => make and open file
+
+
+  4. Open file :
+      // 대상 파일이 있는 디렉토리에서
+      open [existingFileName]
+      nano [existingFileName]
+
+      open -a atom [existingFileName] => open file with application
+      atom [existingFileName]
+
+
+  5. Remove directory, file :
+      // 대상 파일이 있는 디렉토리에서
+      rm *                            => remove all directories and files
+      rm [existingFileName]           => remove a file
+
+      // 대상 디렉토리의 상위 디렉토리에서
+      rm -r [existingDirectoryName]   => remove a directory including inside directories and files
+
+
+  6. Move directory, file :
+      // 디렉토리 이동
+      mv [source: directory/] [destination: directory/]
+      // 디렉토리 이름 바꾸어 이동
+      mv [source: directory/] [destination: newDirectoryName/]
+
+      // 디렉토리 내의 모든 파일 다른 디렉토리로 이동
+      mv [source: directory/*] [destination: directory/]
+      // 다른 디렉토리로 파일 이동
+      mv [source: directory/fileName] [destination: directory/fileName]
+      // 다른 디렉토리로 파일 이름 바꾸어 이동
+      mv [source: directory/fileName] [destination: directory/newFileName]
+
+
+  7. Rename directory, file :
+      // 대상 디렉토리의 상위 디렉토리에서
+      mv [directoryName] [newDirectoryName]
+
+      // 대상 파일이 있는 디렉토리에서
+      mv [fileName] [newFileName]
+
+
+  8. Copy file :
+      // XX 디렉토리 복사는 불가능 하다!!! XX
+      cp [source: directory/] [destination: directory/]
+      // 디렉토리를 미리 만들어 놓고 파일을 전부 복사하는 것은 가능하다.
+      cp [source: directory/*] [destination: directory/]
+
+      // 다른 디렉토리에 같은 이름으로 복사
+      cp [source: directory/fileName] [destination: directory/fileName]
+      // 다른 디렉토리에 다른 이름으로 복사
+      cp [source: directory/fileName] [destination: directory/newFileName]
+
+      // 대상 파일이 있는 디렉토리에서 다른 이름으로 복사
+      cp [fileName] [newFileName]
+
+  -->
+  </body>
+</html>

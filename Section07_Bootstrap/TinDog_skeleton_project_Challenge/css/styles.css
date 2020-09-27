@@ -1,0 +1,206 @@
+/*** Code Refactoring : Becoming a better programmer
+                        => Do not Repeat Yourself.(DRY) */
+/*** 1. Readability
+     2. Modularity
+     3. Efficiency
+     4. Length      */
+
+/************************** Global Section **************************/
+
+body {
+  /* 3) Challenge : Fonts and Embed Link from Google Fonts */
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+p {
+  color: #8F8F8F;
+  line-height: 1.5;
+}
+
+/****** sections ******/
+.colored-section {
+  background-color: #FF4C68;
+  color: #FFFFFF;
+}
+
+.white-section {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/****** containers ******/
+.container-fluid {
+  padding: 5% 15%;
+}
+
+/****** headings ******/
+.title-heading {
+  /* 4) Challenge : Set font-family, font-size, font-weight and line-height */
+  font-family: 'Montserrat-Black', sans-serif;
+  font-size: 3.5rem;
+}
+
+.pricing-heading, .cta-heading {
+  font-family: 'Montserrat-Black', sans-serif;
+  font-size: 3rem;
+}
+
+.testimonial-heading, .pricing-text {
+  font-size: 2.5rem;
+}
+
+.feature-heading, .dog-variety {
+  font-size: 2rem;
+}
+
+/************************** Title Section **************************/
+
+/* Combining Seletors : 관련 폴더 참조 */
+#title .container-fluid {
+  padding: 3% 15% 5%;
+}
+
+/****** navigation-bar ******/
+.navbar {
+  /* top, right-left, bottom */
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  /* 3) Challenge : Fonts and Embed Link from Google Fonts */
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  font-size: 2.6rem;
+}
+
+.nav-item {
+  padding: 0 0 0 15%;
+}
+
+.nav-link {
+  font-family: 'Montserrat-light', sans-serif;
+  font-size: 1.2rem;
+}
+
+.title-row {
+  text-align: left;
+}
+
+/****** download-buttons ******/
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+.btn-dark:hover {
+  border: solid 1px #FFFFFF;
+}
+
+.fab {
+  padding-right: 5px;
+}
+
+/****** title-image ******/
+.title-image {
+  transform: rotate(25deg);
+  /* width 또는 height 둘중 하나만 선택 */
+  width: 300px;
+  padding-top: 35px;
+  /*** Compare with "#features" : 다운로드한 'Stacking Order Flowchart'를 보고 확인 하라! */
+  /*** 이해하기 어렵다!!! */
+  position: absolute;
+  /* 마침 position 속성값이 설정되어 있으므로 위치조정을 해보자 */
+  right: 5%;
+}
+
+@media (max-width: 1026px) {
+  .title-row {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0deg);
+  }
+}
+
+/************************** Features Section **************************/
+
+#features {
+  /*** Compare with ".title-image" : 다운로드한 'Stacking Order Flowchart'를 보고 확인 하라! */
+  /*** 이해하기 어렵다!!! */
+  position: relative;
+  /*** 마치 메소드 함수처럼 일단 한번 적용하면 지워도 관계없다!!! */
+  /* z-index: 1; */
+}
+
+.feature-box {
+  text-align: center;
+  padding: 2%;
+}
+
+.feature-icon {
+  color: #EF8172;
+  margin-bottom: 10%;
+}
+
+.feature-icon:hover {
+  color: #FF4C68;
+}
+
+/************************** Testimonials Section **************************/
+
+/****** testimonial-carousel ******/
+.testimonial-image {
+  border-radius: 100%;
+  width: 25%;
+  margin: 3%;
+}
+
+/************************** Press Section **************************/
+
+#press > .container-fluid {
+  padding: 0 15% 3%;
+}
+
+.press-logo {
+  margin: 5% 2%;
+}
+
+/************************** Pricing Section **************************/
+
+/****** grid-cards ******/
+.pricing-row {
+  padding: 3% 0;
+}
+
+.pricing-col {
+  padding: 3%;
+}
+
+.card-footer {
+  border: none;
+  background: none;
+}
+
+/************************** CTA Section **************************/
+
+.btn-light:hover {
+  border: solid 1px #000000;
+}
+
+/************************** Footer Section **************************/
+
+.footer-icon {
+  margin: 2% 1%;
+}

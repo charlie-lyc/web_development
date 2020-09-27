@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Return Values</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      function getMilk(startingMoney, costPerBottle) {
+        console.log("leaveHouse");
+        console.log("moveRight");
+        console.log("moveRight");
+        console.log("moveUp");
+        console.log("moveUp");
+        console.log("moveUp");
+        console.log("moveUp");
+        console.log("moveRight");
+        console.log("moveRight");
+
+        console.log("You can buy " + calculateBottles(startingMoney, costPerBottle) + " bottles of milk.");
+
+        console.log("moveLeft");
+        console.log("moveLeft");
+        console.log("moveDown");
+        console.log("moveDown");
+        console.log("moveDown");
+        console.log("moveDown");
+        console.log("moveLeft");
+        console.log("moveLeft");
+        console.log("enterHouse");
+
+        return calculateChange(startingMoney, costPerBottle);
+      }
+      // var change = getMilk(5, 1.5);
+      // console.log(change);
+      alert('After buying milk, your change is ' + getMilk(5, 1.5) + ' dollars.');
+
+
+      function calculateBottles(startingMoney, costPerBottle) {
+        var numberOfBottles = Math.floor(startingMoney / costPerBottle);
+        return numberOfBottles;
+      }
+
+      function calculateChange(startingMoney, costPerBottle) {
+        var change = startingMoney % costPerBottle;
+        return change;
+      }
+
+    </script>
+
+  </body>
+</html>

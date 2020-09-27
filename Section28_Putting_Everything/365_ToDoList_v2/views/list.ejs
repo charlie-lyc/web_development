@@ -1,0 +1,29 @@
+<!-- Using EJS Layouts -->
+<%- include('header'); -%>
+
+  <div class="box" id="heading">
+    <h1><%= listTitle %></h1>
+  </div>
+
+  <div class="box">
+    <!-- Passing data from server to webpage -->
+    <% listItems.forEach(function (listItem) {  %>
+         <form action="/delete" method="post">
+           <div class="item">
+             <!-- Submit this form when checkbox is checked -->
+             <input type="checkbox" onChange="this.form.submit()" name="checkBox" value=<%= listItem._id %>>
+             <p><%= listItem.name %></p>
+           </div>
+             <!-- Send data from hidden input tag -->
+             <input type="hidden" name="listName" value=<%= listTitle %>>
+         </form>
+    <% }); %>
+
+    <!-- Passing data from webpage to server -->
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="Add New Item" autofocus required autocomplete="off">
+      <button type="submit" name="list" value=<%= listTitle %>> + </button>
+    </form>
+  </div>
+
+<%- include('footer'); -%>

@@ -1,0 +1,41 @@
+
+/******************************** Tag Selectors *******************************/
+body {
+  background-color: #f7f5dd;
+}
+
+h1 {
+  color: #e2979c;
+  font-size: 100px;
+}
+
+p {
+  color: #e7305b;
+}
+/***** Pseudo Class *****/
+img:hover {
+  background-color: gold;
+}
+
+/***************** Class Selectors : can exist as the same names **************/
+.bacon {
+  background-color: #bac964;
+}
+
+.broccoli {
+  background-color: #e36387;
+}
+
+.bacons {
+  color: #900c3f;
+}
+
+.circular {
+  border-radius: 100%;
+}
+
+/********************* Id Selectors : must be unique in a page ****************/
+#heading {
+  color: red;
+  font-size: 150px;
+}

@@ -1,0 +1,38 @@
+p {
+  background-color: red;
+  width: 200px; /* no effects on "inline" value in display property */
+}
+
+span {
+  background-color: gold;
+  width: 100px; /* no effects on "inline" elements like 'span' */
+}
+/* 'display' property :
+none - 웹페이지에 나타나지 않게 함
+block - 좌우 양쪽에 줄바꿈 포함
+inline - 줄바꿈 포함하지 않음
+inline-block - 우측에 줄바꿈 포함*/
+.second-p {
+  display: inline-block;
+}
+
+.third-p {
+  display: inline;
+}
+
+.fourth-p {
+  display: inline-block;
+  visibility: hidden;
+}
+
+.second-span {
+  display : none;
+}
+
+.third-span {
+  display: inline-block;
+}
+
+.fourth-span {
+  display: block;
+}

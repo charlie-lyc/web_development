@@ -1,0 +1,188 @@
+/* Box Model: margin, (background-color, background-image), border, padding, content */
+
+body {
+  margin: 0;
+  /* content box가 block element의 전체넓이(default, 100%)를 차지할 때 (일반적인 경우에) 적용된다. */
+  text-align: center;
+
+  /* font-family : serif(default), sans-serif, cursive, fantasy, monospace */
+  /* first option, second-option, ... 식으로 정할 수 있다.*/
+  /* font-family: verdana, sans-serif; */
+
+  /* cssfontstack.com : https://www.cssfontstack.com/
+    serif : Times New Roman ...,
+    sans-serif : Arial or Verdana ...,
+    monospace : Courier New ...,
+    fantasy : Papyrus...
+    => copy and paste 복사해서 붙여넣기       */
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+
+  /* web safe font combinations : W3Schools, MDN
+    https://w3schools.com/cssref/css_websafe_fonts.asp  or https://developer.mozilla.org/en-US/docs/Web/CSS/font */
+
+  /* Google Fonts : https://fonts.google.com/  => download font family => install font
+     or, select style => Embed => using <link> tag and font-family => 폰트를 굳이 설치하지 않아도 온라인상에서 폰트 지원*/
+  /* <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"> */
+  /* 구글 폰트 사이트에서 내가 선택한 3가지 스타일 : 주제목 용도, 부제목 용도, 단락 및 기타 용도
+     1) font-family: 'Montserrat', sans-serif;
+     2) font-family: 'Sacramento', cursive;
+     3) font-family: 'Merriweather', serif;    */
+  font-family: 'Merriweather', serif;
+
+  font-size: 1.5em;
+}
+
+h1 {
+  font-family: 'Sacramento', cursive;
+
+  /* Static Font Size : 글자 고정적 크기
+     chrome - settings - appearance - font size에서 조정해도 크기가 변하지 않는다. */
+  /* font-size: 80px; */
+
+  /* Dynamic Font Size : 글자 상대적 크기 (100% = 16px 따라서 80px = 500%)
+     chrome - settings - appearance - font size에서 조정하면 적용이 된다. */
+  /* font-size: 500%; */
+
+  /* em(phasis) element : '1em'은 '16px(100%)'크기를 가진 대문자 'M'의 넓이(폭)을 의미 */
+  /* 80px : 웹브라우저의 설정에 관계없이 글자 크기 고정하고 싶을 때,
+    500% or 5em : 웹브라우저의 설정에 따라 비율에 맞추어 글자 크기를 변화시키고 싶을 때 */
+  /* font-size: 5em; */
+
+  /* 주의해야 할 것은 이것이 부모객체에 대한 상대적 크기라는 사실이다.
+    예를 들어 body tag에서 'font-size: 1.5em'라고 설정되면 이 h1 tag의 font-size는 7.5em이 되어버린다.*/
+  /* 상대적 크기를 자주 사용하게 되면서 헷갈리게 되자 나타난 표기법이 'rem'(root em(phasis)) 이다.
+    'rem'을 사용하면 부모 객체의 설정에 관계없이 'em' 포인트를 유지한다. */
+  font-size: 5rem !important;
+
+  margin-top: 30px auto 0 auto; /* 'em'이나 '%'를 사용할 수도 있다.*/
+  color: #66BFBF;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #66BFBF;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #11999E;
+}
+
+/* content box가 block element의 전체넓이(default, 100%)를 차지하지 않고 일부분일 때
+  (블록개체의 넓이를 조절했을때)), body tag의 'text-align: center;'는 더이상 적용되지 않는다. */
+/* 이 때 가운데 정렬을 하기 위해서는 margin을 활용한다. 기존의 'margin-top: 0;'는 삭제한다. */
+/* h1 {
+  width: 20%;
+  margin: 0 auto;
+} */
+
+p {
+  margin-top: 0px;
+}
+
+a {
+  color: #11999E;
+}
+
+/* border-width: 0px 10px 20px 30px  =>  top-right-bottom-left (clockwise) */
+/* border-width: 10px 20px  =>  top, bottom-right, left */
+/* border-width: 10px 20px 30px  =>  top, right-left, bottom */
+
+/* margin: 0px 10px 20px 30px  =>  top-right-bottom-left (clockwise) */
+/* margin: 10px 20px  =>  top,bottom-right,left */
+/* margin: 10px 20px 30px  =>  top,bottom-right-left */
+
+/* position : static, relative, absolute, fixed */
+.top-container {
+  background-color: #ddf3f5;
+
+  /* Challenge : 앞서 배운 속성들을 이용해 top-cloud의 위치 이동 시키기. */
+  /* 2) 또 다른 방법(top-cloud의 위치 이동 시키기) */
+  padding: 20px;
+
+  /* line-height: normal, 양의 정수 => content가 text인 경우에 현재 폰트사이즈 대비 block element의 높이 설정.
+    값이 2일 경우 content box의 위아래 여유공간이 2배가 된다.(워드에 비교하자면 줄간격의 개념)
+    이 div tag에 text content가 2개 뿐이여서 이렇게 설정했지만, 해당 h1, h2 개체에 직접 속성값을 설정해도 된다. */
+  line-height: 2;
+
+}
+
+.name {
+  text-decoration: underline;
+}
+
+/* Challenge : 텍스트 "a programmer"의 font-size를 40px이 되도록 설정, 이때 브라우저의 설정에 따라 dynamic size가 적용된다.*/
+.job {
+  /* body tag에서 'font-size: 1.5em'라고 설정했으므로 2.5em(250%)으로 설정하면 3.75em(375%)가 되어버리므로 'rem'을 이용 */
+  font-size: 2.5rem;
+  /* font-weight: bolder, bold, lighter, normal, 100 ~ 900  => '글자의 두께'*/
+  font-weight: normal;
+}
+
+.my-profile {
+  border-radius: 100%;
+}
+
+.computer {
+  border-radius: 100%;
+  /* Challenge : 이미지 크기 20%로 줄이기 */
+  width: 20%;
+  height: 20%;
+  /* Challenge : 부제목과 단락글이 이미지의 오른쪽(과 아래쪽으로 둘러싸서)에 위치하도록 설정  */
+  float: left;
+  /* Challenge : 오른쪽 텍스트 개체와 공간 30px 띄우기 */
+  margin-right: 30px;
+}
+
+/* Challenge : 위의 컴퓨터 이미지와 반대로 위치하도록 설정 */
+.chillies {
+  border-radius: 100%;
+  width: 20%;
+  height: 20%;
+  float: right;
+  margin-left: 30px;
+}
+
+/* Challenge : 이미지의 오른쪽 또는 왼쪽옆에는 부제목만 위치하고 단락글은 아래쪽에 위치하도록 설정 */
+.skill-description {
+  clear: both; /* left, right : 뜻 그대로 개체의 왼쪽, 오른쪽 또는 양쪽에 아무 것도 두지 않는다는 속성 */
+}
+
+/* Challenge : 앞서 배운 속성들을 이용해 top-cloud의 위치 이동 시키기.
+   3가지 방법 : 1) margin, 2)position-relative, 3)position-absolute 개념 각각 이용*/
+/* 1) 심플한 방법 */
+.top-cloud {
+  margin-left: 450px;
+}
+/* 2) 또 다른 방법 */
+/* .top-cloud {
+  position: relative;
+  left: 225px;
+} */
+
+/* 'position: relative;' 를 이용한다면 산의 위치에 영향을 주지 않고 구름의 위치를 조정할 수 있으며,
+  'position: absolute;' 를 이용한다면 구름을 원래위치(default)로 띄우고,
+  그에 따라 산의 위치에 영향을 주어 가운데 정렬이 된다. : 같은 img 태그 개체끼리 위치에 영향을 준다.*/
+.bottom-cloud {
+  position: absolute;
+}
+
+/* Challenge :
+ 1) skill-row 클래스의 폭을 50%로 설정
+ 2) 가운데 정렬
+ 3) 위아래 마진 150px 설정
+ 4) 부제목과 단락을 왼쪽 기준 정렬
+ 5) 줄간격 2배 설정             */
+.skill-row {
+  width: 50%;
+  margin: 150px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+/* Summary :
+  1. 'position'과 'float' 속성은 그냥 알고만 있고 왠만하면 사용하지 않는 것이 에러가 적다.
+  2. 가급적 tag의 순서에 따른 배치를 이용하고 혹은 텍스트가 결합된 이미지를 활용하는 것이 좋다.
+  3. font-family는 Google Fonts에서 원하는 스타일을 선택해서 link tag로 이용하는 것이 좋다.
+  4. font-size는 주로 'em' 또는 'rem'을 이용해 dynamic size를 적용한다.
+  5. 가독성을 높이기 위해 'line-height'속성을 이용해 줄간격을 조절한다.     */

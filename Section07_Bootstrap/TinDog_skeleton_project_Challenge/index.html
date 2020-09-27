@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap CSS : 아무렇지 않게 지나쳤지만 'CSS Stylesheets'보다 반드시 먼저 위치해야 한다.!-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- CSS Stylesheets : 'Bootstrap CSS'와 마찬가지로 외부 css파일 링크이므로 적용 우선 순위는 동급이다.
+                그러나, 코드의 순서상 나중에 위치하는 이 'CSS Stylesheets'가 우선 순위가 더 앞선다! -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- 3) Challenge : Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap">
+
+  <title>TinDog</title>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+    <!-- 4) Challenge : 스크린 폭에 따라 콘텐트가 차지하는 폭의 비율이 달라지는 반응형 웹 구현,
+                        Bootstrap의 "container-fluid"를 이용 -->
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+      <!-- 1) Challenge : "CODEPLY"에서 navbar 코딩 먼저 실습 -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#features">tindog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  ml-auto">
+            <li class="nav-item  ml-auto">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item  ml-auto">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item  ml-auto">
+              <a class="nav-link" href="#cta">Download</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Title -->
+      <!-- 2) Challenge : Bootstrap의 "Grid Layout"을 이용하라! <div>를 'row'와 'col'으로 사용 -->
+      <div class="title-row row">
+        <div class="col-lg-6">
+          <h1 class="title-heading">Meet new and interesting dogs nearby.</h1>
+          <!-- 5) Challenge : Bootstrap 'button' 종류 및 사이즈 설정 -->
+          <!-- 6) Challenge : Font Awesome으로 부터 CDN 및 링크 사용 설정,
+                  여기서 'i(talic)' 태그의 사용은 다소 부적합하다. 아마도 태그의 길이가 짧아서
+                  사용이 편하거나 혹은 'icon'과 중의적으로 사용하기 위해 이용한 것으로 보인다.
+                  Bootstrap과 마찬가지로 'sapn' 태그가 더 적합하다. 하지만 편의상 그냥 쓰자. -->
+          <button class="download-button btn btn-dark btn-lg" type="button"><i class="fab fa-apple"></i>Download</button>
+          <button class="download-button btn btn-outline-light btn-lg" type="button"><i class="fab fa-google-play"></i>Download</button>
+        </div>
+        <div class="col-lg-6">
+          <img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Features -->
+  <section class="white-section" id="features">
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="feature-icon fas fa-check-circle fa-4x"></i>
+          <h3 class="feature-heading">Easy to use.</h3>
+          <p>So easy to use, even your dog could do it.</p>
+        </div>
+        <div class="feature-box col-lg-4">
+          <i class="feature-icon fas fa-bullseye fa-4x"></i>
+          <h3 class="feature-heading">Elite Clientele</h3>
+          <p>We have all the dogs, the greatest dogs.</p>
+        </div>
+        <div class="feature-box col-lg-4">
+          <i class="feature-icon fas fa-heart fa-4x"></i>
+          <h3 class="feature-heading">Guaranteed to work.</h3>
+          <p>Find the love of your dog's life or your money back.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Testimonials -->
+  <section class="colored-section" id="testimonials">
+
+    <!-- Carousel -->
+    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="container-fluid carousel-item active">
+          <h2 class="testimonial-heading">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+          <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+          <em>Pebbles, New York</em>
+        </div>
+
+        <div class="container-fluid carousel-item">
+          <h2 class="testimonial-heading">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+          <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+          <em>Beverly, Illinois</em>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Press -->
+  <section class="colored-section" id="press">
+
+    <div class="container-fluid">
+
+      <img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
+      <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+      <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
+      <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+
+    </div>
+
+  </section>
+
+  <!-- Pricing -->
+  <section class="white-section" id="pricing">
+
+    <div class="container-fluid">
+
+      <h2 class="pricing-heading">A Plan for Every Dog's Needs</h2>
+      <p>Simple and affordable price plans for your and your dog.</p>
+
+      <!-- * Grid Cards : Challenge => Cards에 Gird Layout을 적용하여 responsive web 구현 -->
+      <div class="pricing-row row">
+        <div class="pricing-col col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="dog-variety">Chihuahua</h3>
+            </div>
+            <div class="card-body">
+              <h2 class="pricing-text">Free</h2>
+              <p>5 Matches Per Day</p>
+              <p>10 Messages Per Day</p>
+              <p>Unlimited App Usage</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-block btn-outline-dark " type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-col col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="dog-variety">Labrador</h3>
+            </div>
+            <div class="card-body">
+              <h2 class="pricing-text">$49 / mo</h2>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-block btn-dark" type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-col col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="dog-variety">Mastiff</h3>
+            </div>
+            <div class="card-body">
+              <h2 class="pricing-text">$99 / mo</h2>
+              <p>Pirority Listing</p>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-block btn-dark" type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Call to Action -->
+  <section class="colored-section" id="cta">
+
+    <div class="container-fluid">
+
+      <h3 class="cta-heading">Find the True Love of Your Dog's Life Today.</h3>
+      <button class="download-button btn btn-dark btn-lg" type="button"><i class="fab fa-apple"></i>Download</button>
+      <button class="download-button btn btn-light btn-lg" type="button"><i class="fab fa-google-play"></i>Download</button>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="white-section" id="footer">
+
+    <div class="container-fluid">
+
+      <i class="footer-icon fab fa-twitter"></i>
+      <i class="footer-icon fab fa-facebook-f"></i>
+      <i class="footer-icon fab fa-instagram"></i>
+      <i class="footer-icon fas fa-envelope"></i>
+      <p>© Copyright 2018 TinDog</p>
+
+  </div>
+
+  </footer>
+
+  <!-- 6) Challenge : Font Awesome -->
+  <script src="https://kit.fontawesome.com/62052681c7.js" crossorigin="anonymous"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

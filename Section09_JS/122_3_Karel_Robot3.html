@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Karel Robot3</title>
+  </head>
+  <body>
+    <!-- Karel Robot : https://stanford.edu/~cpiech/karel/ide.html -->
+    <script type="text/javascript">
+      // Challenge3 : 5*5 world 사이즈에서 좌측 최하단에서 우측 최상단으로 지그재그 이동하면서 2칸 간격마다 beeper 설치하기
+
+      // Instructor's Code :
+      function main() {
+        beepersRight();
+        goUpTurnLeft();
+        beepersLeft();
+        goUpTurnRight();
+        beepersRight();
+        goUpTurnLeft();
+        beepersLeft();
+        goUpTurnRight();
+        beepersRight();
+      }
+      function goUpTurnRight() {
+        turnRight();
+        move();
+        turnRight();
+      }
+      function goUpTurnLeft() {
+        turnLeft();
+        move();
+        turnLeft();
+      }
+      function beepersRight() {
+        putBeeper();
+        move();
+        move();
+        putBeeper();
+        move();
+        move();
+        putBeeper();
+      }
+      function beepersLeft() {
+        move();
+        putBeeper();
+        move();
+        move();
+        putBeeper();
+        move();
+      }
+
+      // My Code :
+      // function main() {
+      //   putBeepersOddLine();
+      //   putBeepersEvenLine();
+      //   putBeepersOddLine();
+      //   putBeepersEvenLine();
+      //   putBeepersOddLine();
+      // }
+      // function putBeepersOddLine() {
+      //   putBeeper();
+      //   move();
+      //   move();
+      //   putBeeper();
+      //   move();
+      //   move();
+      //   putBeeper();
+      // }
+      // function putBeepersEvenLine() {
+      //   turnLeft();
+      //   move();
+      //   turnLeft();
+      //   move();
+      //   putBeeper();
+      //   move();
+      //   move();
+      //   putBeeper();
+      //   move();
+      //   turnRight();
+      //   move();
+      //   turnRight();
+      // }
+
+    </script>
+
+  </body>
+</html>

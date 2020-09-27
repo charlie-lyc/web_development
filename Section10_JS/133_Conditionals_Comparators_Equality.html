@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Conditionals, Comparators, Equality</title>
+  </head>
+  <body>
+
+    <!-- if ~ else if ~ else : conditional statement
+         === : is equal to (data type and equality)
+         !== : is not equal to (data type and equality)
+          >  : is greater than
+         >=  : is greater than or equal to
+          <  : is less(er) than
+         <=  : is less(er) than or equal to
+
+         ==  : (only equality)
+         !=  : (only equality)
+
+         &&  : and
+         ||  : or
+          !  : not                           -->
+
+    <script type="text/javascript">
+
+      var yourName = prompt('What is your name?');
+      var yourCrush = prompt('What is her name?');
+      var loveScore = calculateLoveScore();
+      console.log(loveScore);
+
+      function calculateLoveScore() {
+        return Math.floor(Math.random() * 100);
+      }
+
+      if (loveScore === 100) {
+        alert('Perfect! ' + yourName + ' and ' + yourCrush + "'s love score is " + loveScore + '%.');
+      } else if (loveScore !== 100 && loveScore >= 70) {
+        alert('So Good! ' + yourName + ' and ' + yourCrush + "'s love score is " + loveScore + '%.');
+      } else if (50 <= loveScore && loveScore < 70) {
+        alert('Good. ' + yourName + ' and ' + yourCrush + "'s love score is " + loveScore + '%.');
+      } else {
+        alert('Not Bad. ' + yourName + ' and ' + yourCrush + "'s love score is " + loveScore + '%.');
+      }
+
+    </script>
+
+  </body>
+</html>

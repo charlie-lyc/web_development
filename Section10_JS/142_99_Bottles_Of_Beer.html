@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>99 Bottles of Beer Song</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      var numberOfBottles = 99;
+
+      function sing99BottlesOfBeerSong() {
+
+        while (numberOfBottles >= 0) {
+          console.log(numberOfBottles + ' bottles of beer on the wall, ' + numberOfBottles + ' bottles of beer.');
+          if (numberOfBottles === 1) {
+            console.log('Take one down and pass it around, no more bottles of beer on the wall.');
+          }
+
+          numberOfBottles --;
+
+          if (numberOfBottles === 0) {
+            console.log('No more bottles of beer on the wall, no more bottles of beer.');
+            console.log('Go to the store and buy some more, 99 bottles of beer on the wall.');
+            break;
+          }
+          console.log('Take one down and pass it around, ' + numberOfBottles + ' bottles of beer on the wall.');
+        }
+
+      }
+
+      sing99BottlesOfBeerSong();
+
+    </script>
+
+  </body>
+</html>

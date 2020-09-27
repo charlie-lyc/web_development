@@ -1,0 +1,23 @@
+<!-- Using EJS Layouts -->
+<%- include('header'); -%>
+
+  <div class="box" id="heading">
+    <h1><%= listTitle %></h1>
+  </div>
+
+  <div class="box">
+    <!-- Passing data from server to webpage -->
+    <% for (let i = 0; i < newListItems.length; i++) { %>
+      <div class="item">
+        <input type="checkbox">
+        <p><%= newListItems[i] %></p>
+      </div>
+    <% } %>
+    <!-- Passing data from webpage to server -->
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="Add New Item" autofocus required autocomplete="off">
+      <button type="submit" name="list" value=<%= listTitle %>> + </button>
+    </form>
+  </div>
+
+<%- include('footer'); -%>

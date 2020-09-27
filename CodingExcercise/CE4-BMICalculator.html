@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      //Create your function below this line.
+      //The first parameter should be the weight and the second should be the height.
+      function bmiCalculator(weight, height) {
+        // var bmi = weight / (height * height);
+        var bmi = weight / Math.pow(height, 2);
+        return bmi;
+      }
+
+      /* If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
+      var bmi = bmiCalculator(65, 1.8);
+      bmi should equal 20 when it's rounded to the nearest whole number.
+      */
+      var bmi = bmiCalculator(65, 1.8);
+      console.log(Math.round(bmi));
+
+    </script>
+
+  </body>
+</html>

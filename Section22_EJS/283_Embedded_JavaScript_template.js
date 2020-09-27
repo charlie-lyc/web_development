@@ -1,0 +1,3 @@
+/* EJS : Embedded JavaScript template
+
+*/

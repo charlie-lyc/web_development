@@ -1,0 +1,6 @@
+.DS_Store
+secrets.txt
+.env
+
+# Exclude *.txt
+# Comment ...

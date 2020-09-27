@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      function fibonacciGenerator(n) {
+      //Do NOT change any of the code above 👆
+        var fibonacci = [];
+
+        for (let i = 0; i < n; i++) {
+          if (i === 0) {
+            fibonacci[i] = 0;
+          } else if (i === 1) {
+            fibonacci[i] = 1;
+          } else {
+            fibonacci[i] = fibonacci[i-2] + fibonacci[i-1];
+          }
+        }
+
+        return fibonacci;
+      //Do NOT change any of the code below 👇
+      }
+
+      console.log(fibonacciGenerator(10));
+      
+    </script>
+
+  </body>
+</html>

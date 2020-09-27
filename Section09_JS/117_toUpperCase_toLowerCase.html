@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Change Case of String</title>
+  </head>
+  <body>
+    <!-- Challenge : capitalize input string -->
+    <script type="text/javascript">
+
+      var name = prompt('What is your name?');
+
+      // Instructor's Code :
+      var firstCharOfName = name.slice(0, 1);
+      var restOfName = name.slice(1, name.length)
+      var capitalizedName = firstCharOfName.toUpperCase() + restOfName.toLowerCase();
+
+      // My Code :
+      // var lowerName = name.toLowerCase();
+      // var splitedName = lowerName.split('');
+      // splitedName[0] = splitedName[0].toUpperCase();
+      // var capitalizedName = splitedName.join('');
+
+      console.log(capitalizedName);
+      alert('Hello, ' + capitalizedName + '.')
+
+    </script>
+
+  </body>
+</html>

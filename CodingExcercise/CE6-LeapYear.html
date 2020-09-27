@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      function isLeap(year) {
+      /**************Don't change the code above****************/
+        var remainderBy4 = year % 4;
+        var remainderBy100 = year % 100;
+        var remainderBy400 = year % 400;
+        var result;
+
+        if (remainderBy4 === 0) {
+          if (remainderBy100 === 0) {
+            if (remainderBy400 === 0) {
+              result = 'Leap year.';
+            } else {
+              result = 'Not leap year.';
+            }
+          } else {
+            result = 'Leap year.';
+          }
+        } else {
+          result = 'Not leap year.';
+        }
+        return result;
+      /**************Don't change the code below****************/
+      }
+
+      console.log(isLeap(2400));
+      console.log(isLeap(1989));
+
+    </script>
+
+  </body>
+</html>

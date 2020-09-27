@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Method</title>
+  </head>
+  <body>
+    <!-- 크롬 콘솔에서 실습 -->
+    <script type="text/javascript">
+    /* "Method"
+
+      // Method 정의
+      function moveSuitcase() {
+        alert('May I take your suitcase?');
+        pickUpSuitcase();
+        move();
+      }
+      // Object에 Method 추가
+      var bellBoy1 = {
+        name: 'Timmy',
+        age: 19,
+        hasWorkPermit: true,
+        language: ['French', 'English'],
+        moveSuitcase: function() {
+          alert('May I take your suitcase?');
+        }
+      }
+      // Call Method : Method 호출
+      bellBoy1.moveSuitcase();
+
+    */
+
+    /* "Constructor Function"
+
+      // Method 추가
+      function BellBoy(name, age, hasWorkPermit, languages) {
+        this.name = name;
+        this.age = age;
+        this.hasWorkPermit = hasWorkPermit;
+        this.languages = languages;
+        this.moveSuitcase = function() {
+          alert('May I take your suitcase?');
+        };
+      }
+      // 객체 만들기
+      var bellBoy1 = new BellBoy('Timmy', 19, true, ['French', 'English']);
+      // Method 호출
+      bellBoy1.moveSuitcase();
+    */
+
+    /* Challenge : Method 추가
+
+      var houseKeeper1 = {
+        name: "Jane",
+        yearsOfExperience: 12,
+        cleaningRepertoire: ["bathroom", "lobby", "bedroom"],
+        clean: function() {
+          alert('Cleaning in progress...');
+        }
+      }
+
+      function HouseKeeper(name, yearsOfExperience, cleaningRepertoire) {
+        this.name = name;
+        this.yearsOfExperience = yearsOfExperience;
+        this.cleaningRepertoire = cleaningRepertoire;
+        this.clean = function() {
+          alert('Cleaning in progress...');
+        };
+      }
+
+      // 객체 만들기
+      var houseKeeper1 = new HouseKeeper('Jane', 12, ["bathroom", "lobby", "bedroom"]);
+      // Method 호출
+      houseKeeper1.clean();
+    */
+
+    </script>
+
+  </body>
+</html>
