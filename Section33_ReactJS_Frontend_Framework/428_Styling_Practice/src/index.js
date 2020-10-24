@@ -24,7 +24,7 @@ let greeting;
 if (0 <= currentTime && currentTime < 12) {
   customStyle.color = "red";
   greeting = 'morning';
-} else if {
+} else if (12 <= currentTime && currentTime < 18) {
   customStyle.color = "green";
   greeting = 'afternoon';
 } else {
@@ -33,6 +33,6 @@ if (0 <= currentTime && currentTime < 12) {
 }
 
 ReactDOM.render(
-  <h1 className="heading" style={customStyle}>Goog {greeting}</h1>,
+  <h1 className="heading" style={customStyle}>Good {greeting}</h1>,
   document.querySelector('#root')
 );

@@ -5,7 +5,19 @@ const fname = "Charlie";
 const num = 3;
 const lname = "lee";
 
-/* JS Expression: OK -VS- JS Statement: NOT available */
+/* JS Expression: OK vs. JS Statement: NOT available */
+/*
+  JSX 내에서는 간단한 자바스크립트 표현은 사용이 가능하다.
+    ex) 3, 1+2, 'hello', fn(), [], {}
+
+  하지만, 구문 작성은 적용이 되지 않는다.
+    ex) 3;
+        let x = 3;
+        if () ~ else if ~ else {}
+        for ()~
+        while () ~
+
+*/
 ReactDOM.render(
   <div>
     <h1>Hello, {fname}!</h1>

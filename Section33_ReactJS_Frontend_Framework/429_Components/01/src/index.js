@@ -8,5 +8,5 @@ ReactDOM.render(
     <Heading />
     <List />
   </div>,
-  cocument.querySelector('#root')
+  document.querySelector('#root')
 );
