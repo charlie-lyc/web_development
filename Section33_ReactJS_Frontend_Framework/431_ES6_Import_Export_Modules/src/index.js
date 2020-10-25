@@ -8,9 +8,9 @@ import * as pi from "./math";
 
 ReactDOM.render(
   <ul>
-    {/* <li>{PI}</li>
+    /* <li>{PI}</li>
     <li>{doublePi()}</li>
-    <li>{triplePi()}</li> */}
+    <li>{triplePi()}</li> */
     <li>{pi.default}</li>
     <li>{pi.doublePi()}</li>
     <li>{pi.triplePi()}</li>

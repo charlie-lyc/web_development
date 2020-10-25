@@ -9,7 +9,7 @@ const url = "https://picsum.photos/300";
 
 ReactDOM.render(
   <div>
-    {/* <h1 class="heading">My Favourite Foods</h1> */}
+    /* <h1 class="heading">My Favourite Foods</h1> */
     <h1 className="heading" contentEditable="true" spellCheck="false">
       Random Image
     </h1>

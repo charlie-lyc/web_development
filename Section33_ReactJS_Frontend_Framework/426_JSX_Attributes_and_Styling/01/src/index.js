@@ -5,11 +5,11 @@ import ReactDOM from "react-dom";
 /* JSX Attribute Names are followed by Covention of JS, not HTML ex) 'camelCase' */
 /* Self Closing Tag without "/" is forgiven in HTML, but it is NOT available in JSX */
 /* 이미지 링크의 경우 대상 파일에 대한 간단한 설명이 alt="" 속성을 통해 작성되어 있어야 한다. */
-/* 결론적으로 JSX에서의 문법이 HTML보다 훨씬 더 엄격하다는 사실을 숙지해야 한다. 
+/* 결론적으로 JSX에서의 문법이 HTML보다 훨씬 더 엄격하다는 사실을 숙지해야 한다.
   제대로 지켜지지 않으면 지속적으로 Error, Problem, Warning이 표시된다.            */
 ReactDOM.render(
   <div>
-    {/* <h1 class="heading">My Favourite Foods</h1> */}
+    /* <h1 class="heading">My Favourite Foods</h1> */
     <h1 className="heading" contentEditable="true" spellCheck="false">
       My Favourite Foods
     </h1>
