@@ -6,6 +6,7 @@ function createCard(contact) {
   return (
     <Card
       {/* 'key'는 React DOM 구조에서 자동으로 생성되는 특별한 property이므로 이용해도 나타나지 않는다. */}
+      {/* 앞서 크롬 브라우저에 설치한 React Dev Tool을 통해서 확인할 수 있다. */}
       key={contact.id}
       {/* 따라서 id를 나타내고 싶다면 key말고 다른 property name을 사용해야 한다. */}
       id={contact.id}
